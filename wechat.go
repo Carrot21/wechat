@@ -4,16 +4,16 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/silenceper/wechat/cache"
-	"github.com/silenceper/wechat/context"
-	"github.com/silenceper/wechat/js"
-	"github.com/silenceper/wechat/material"
-	"github.com/silenceper/wechat/menu"
-	"github.com/silenceper/wechat/oauth"
-	"github.com/silenceper/wechat/server"
-	"github.com/silenceper/wechat/template"
-	"github.com/silenceper/wechat/user"
-	"github.com/silenceper/wechat/pay"
+	"github.com/TargetLiu/wechat/cache"
+	"github.com/TargetLiu/wechat/context"
+	"github.com/TargetLiu/wechat/js"
+	"github.com/TargetLiu/wechat/material"
+	"github.com/TargetLiu/wechat/menu"
+	"github.com/TargetLiu/wechat/oauth"
+	"github.com/TargetLiu/wechat/pay"
+	"github.com/TargetLiu/wechat/server"
+	"github.com/TargetLiu/wechat/template"
+	"github.com/TargetLiu/wechat/user"
 )
 
 // Wechat struct
@@ -23,13 +23,13 @@ type Wechat struct {
 
 // Config for user
 type Config struct {
-	AppID          string
-	AppSecret      string
-	Token          string
-	EncodingAESKey string
-	PayMchID       string  //支付 - 商户 ID
-	PayNotifyURL   string  //支付 - 接受微信支付结果通知的接口地址
-	PayKey         string  //支付 - 商户后台设置的支付 key
+	AppID          string `json:"app_id"`
+	AppSecret      string `json:"app_secret"`
+	Token          string `json:"token"`
+	EncodingAESKey string `json:"c2S7Yi0GltULppQ4DF6ag"`
+	PayMchID       string //支付 - 商户 ID
+	PayNotifyURL   string //支付 - 接受微信支付结果通知的接口地址
+	PayKey         string //支付 - 商户后台设置的支付 key
 	Cache          cache.Cache
 }
 
